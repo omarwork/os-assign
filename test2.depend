@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1585935293 source:c:\users\omar\desktop\os\test2\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<unistd.h>
+
+1585935126 source:c:\users\omar\desktop\os\test2\funccccc.c
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	<string.h>
+
