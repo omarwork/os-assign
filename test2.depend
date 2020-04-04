@@ -1,13 +1,28 @@
 # depslib dependency file v1.0
-1585935293 source:c:\users\omar\desktop\os\test2\main.c
+1585921956 source:c:\users\omar\desktop\os\test2\main.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	<unistd.h>
 
-1585935126 source:c:\users\omar\desktop\os\test2\funccccc.c
+1585922050 
+
+1585922050 source:c:\users\omar\desktop\os\test2\funccccc.c
 	<stdio.h>
 	<stdlib.h>
 	<unistd.h>
 	<string.h>
+
+1586000045 source:/home/omar74/workspace/test2/funccccc.c
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	<string.h>
+
+1586000045 source:/home/omar74/workspace/test2/main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<unistd.h>
+	<sys/wait.h>
 

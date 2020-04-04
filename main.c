@@ -16,13 +16,10 @@ int main()
     int status;
     pid_t child_pid;
     pid_t waitvar;
-    printf("Hello world!\n");
+
 while(1){
 
     ahma=read_line();
-    //puts(ahma);
-    puts("here");
-    //printf("\n%d\n",(int)strlen(ahma));
     code_parsed=parse(ahma);
     puts(code_parsed[0]);
     if (strcmp(code_parsed[0],"exit")==0){
@@ -34,7 +31,7 @@ while(1){
     puts("not ok");
     }
 
-    //printf("\nthere%s",code_parsed[0]);
+
     child_pid=fork();
     if (child_pid==0){
     printf("\nchild:\ncurrent id:%d and child pid%d\n",getpid(),child_pid);

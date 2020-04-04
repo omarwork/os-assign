@@ -29,28 +29,20 @@ char** parse(char* preparse){
     char ** command;
     char *finalpar;
     int n=1;
-    //printf("\n%d",strlen(command));
-    printf("\n%d",sizeof(command));
-    printf("\n%d",sizeof(*command));
-    printf("\n%d",sizeof(parsed));
-    printf("\n%d",sizeof(*parsed));
-    printf("\n%d",sizeof(char*));
-    printf("\n%d",sizeof(char**));
+
 
     command=(char**)malloc(n*sizeof(char*));
 
-    printf("\n%d",sizeof(command));
+
     int i=0;
     strcpy(preparse_str,preparse);
-puts(preparse_str);
 
     parsed=strtok(preparse_str," ");
-    puts(preparse_str);
   //  puts(parsed);
     // printf("\n%d parsed>>\n",(int)strlen(&parsed));
     //printf("\n%d\n",(int)strlen(command));
 
-    printf("\n%d",sizeof(command));
+
     while(parsed!=NULL){
 if (i==n){
         n=n+1;
@@ -64,12 +56,10 @@ if (i==n){
         parsed=strtok(NULL," ");
 
     }
-    printf("%d",i);
-    puts("tmam");
-    printf("a");
 
 
-    printf("\n%d",sizeof(command));
+
+
     /*if(command=realloc(command,(i+1))){
 puts("\n allah ynwr");
     }
