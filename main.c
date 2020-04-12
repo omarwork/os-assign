@@ -36,22 +36,27 @@ while(1){
     if (child_pid==0){
     printf("\nchild:\ncurrent id:%d and child pid%d\n",getpid(),child_pid);
     puts(code_parsed[0]);
-    //printf("\nthere%s",code_parsed[0]);
+    
+    /*
+put your code here
 
-    //printf("%d",funny);
-    //convptoptoarrp(code_parsed,funny);
-    //char *argv[] = {"ls", "-a", "-h", NULL};
+
+
+
+
+
+
+
+
+*/
 
     if (execvp(code_parsed[0], code_parsed) < 0) {
                 perror(code_parsed[0]);
                 exit(1);
             }
-    //
 
-         // if (execvp(*code_parsed, code_parsed) < 0) {     /* execute the command  */
-           //    printf("*** ERROR: exec failed\n");
-             //  exit(1);
-         // }
+
+         
     }
     else{
     waitvar=waitpid(child_pid,&status,WUNTRACED);
