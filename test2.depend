@@ -26,3 +26,16 @@
 	<unistd.h>
 	<sys/wait.h>
 
+1586730459 source:/home/omar74/workspace/pull/funccccc.c
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	<string.h>
+
+1586733476 source:/home/omar74/workspace/pull/main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<unistd.h>
+	<sys/wait.h>
+

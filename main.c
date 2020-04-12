@@ -71,7 +71,7 @@ else{
     child_pid=fork();
     if (child_pid==0)
     {
-    printf("\nchild:\ncurrent id:%d and child pid=%d\n",getpid(),child_pid);
+
 
 
 
@@ -80,8 +80,8 @@ else{
 
       if ( (execvp(code_parsed[0], code_parsed) < 0))
             {
-                perror(code_parsed[0]);
-
+                perror("error");
+exit(1);
             }
 
             exit(0);
@@ -94,7 +94,12 @@ if(useful!=1)
     waitvar=waitpid(child_pid,&status,WUNTRACED);
 
 }
-    printf("\nparent\ncurrent id:%d and child pid%d\n",getpid(),child_pid);
+else{
+useful=0;
+printf("%d\n",child_pid);
+
+}
+
 
     //puts(code_parsed[0]);
 

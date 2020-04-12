@@ -63,7 +63,7 @@ if (i==n){
     }
 
 command=realloc(command,n*sizeof(char*));
-
+command[i]=NULL;
 
 
     /*if(command=realloc(command,(i+1))){
