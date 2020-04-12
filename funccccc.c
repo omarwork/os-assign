@@ -5,11 +5,11 @@
 char * convtoheap(char *arr);
 
 char *read_line(){
-
+char s[100];
     char ch;
     int i =0,n=10;
 char *test=(char*) malloc(n);
-puts("shell>>");
+printf(" %s :~$  ",getcwd(s,100));
 ch=getchar();
 while (ch!='\n' ){
     test[i]=ch;
@@ -23,13 +23,12 @@ while (ch!='\n' ){
 test[i]='\0';
 return test;
 }
-char** parse(char* preparse){
+char** parse(char* preparse,int* st){
     char preparse_str[strlen(preparse)];
     char* parsed;
     char ** command;
-    char *finalpar;
     int n=1;
-
+    //printf("\n%d",strlen(command));
 
     command=(char**)malloc(n*sizeof(char*));
 
@@ -37,26 +36,33 @@ char** parse(char* preparse){
     int i=0;
     strcpy(preparse_str,preparse);
 
+
     parsed=strtok(preparse_str," ");
+
   //  puts(parsed);
     // printf("\n%d parsed>>\n",(int)strlen(&parsed));
     //printf("\n%d\n",(int)strlen(command));
 
-
     while(parsed!=NULL){
-if (i==n){
-        n=n+1;
-        command=realloc(command,n*sizeof(char*));
-        }
-        command[i]=convtoheap(parsed);
-        puts(command[i]);
+if (strcmp(parsed,"&")!=0)
+{
+command[i]=convtoheap(parsed);
   //      printf("%d",(int)strlen(command));
 //        printf("\n%d parsed>>\n",(int)strlen(&parsed));
         i++;
         parsed=strtok(NULL," ");
-
+if (i==n){
+        n=n+1;
+        command=realloc(command,n*sizeof(char*));
+        }
+}
+    else{
+    *st=1;
+    parsed=strtok(NULL," ");
+    }
     }
 
+command=realloc(command,n*sizeof(char*));
 
 
 
